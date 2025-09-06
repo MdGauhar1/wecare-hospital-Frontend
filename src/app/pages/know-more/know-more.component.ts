@@ -11,4 +11,10 @@ import { RouterModule } from '@angular/router';
 })
 export class KnowMoreComponent {
 
+  constructor() {}
+
+  ngOnInit(): void {
+    // Scroll to top when the component loads
+    window.scrollTo(0, 0);
+  }
 }

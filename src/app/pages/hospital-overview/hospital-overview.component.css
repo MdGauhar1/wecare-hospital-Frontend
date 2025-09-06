@@ -5,6 +5,7 @@
   margin: 0px 0px 15px;
 }
 
+
 .hospital-bg {
   width: 100%;
   max-width: 1600px;
@@ -17,7 +18,10 @@
   align-items: flex-end;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   transition: transform 0.3s, box-shadow 0.3s;
+   filter: brightness(1.2) contrast(1.1);
 }
+
+
 
 .hospital-bg:hover {
   transform: translateY(-5px);
@@ -61,6 +65,7 @@
   background-color: #e6f2ff;
   gap: 30px;
   border-radius: 20px;
+  margin-top: 30px;
 }
 
 .hero-text {
