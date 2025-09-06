@@ -9,6 +9,7 @@ import { PatientUpdateComponent } from './patients/patient-update.component';
 import { KnowMoreComponent } from './pages/know-more/know-more.component';
 import { DoctorListComponent } from './pages/doctors/doctor-list.component';
 import { DoctorFormComponent } from './pages/doctors/doctor-form.component';
+import { DoctorDetailComponent } from './pages/doctors/doctor-detail/doctor-detail.component';
 
 
 export const routes: Routes = [
@@ -22,6 +23,7 @@ export const routes: Routes = [
   { path: 'know-more', component: KnowMoreComponent },
   { path: 'doctors', component: DoctorListComponent },
   { path: 'add-doctor', component: DoctorFormComponent },
+  { path: 'doctors/:id', component: DoctorDetailComponent },
   { path: '**', redirectTo: '' },
 ];
 

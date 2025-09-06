@@ -20,4 +20,15 @@ export class DoctorService {
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
+
+  // doctor.service.ts
+  getBySpecialty(specialtyId: number): Observable<Doctor[]> {
+    return this.http.get<Doctor[]>(`${this.apiUrl}/specialty/${specialtyId}`);
+  }
+
+  getById(id: number): Observable<Doctor> {
+  return this.http.get<Doctor>(`${this.apiUrl}/${id}`);
+}
+
+
 }

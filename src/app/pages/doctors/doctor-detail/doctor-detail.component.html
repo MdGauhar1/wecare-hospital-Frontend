@@ -1,0 +1,27 @@
+<div *ngIf="doctor" class="doctor-card">
+  <!-- Doctor photo -->
+  <img src="https://media.istockphoto.com/id/1126208993/photo/male-doctor-standing-upright-with-crossed-arms-unknown-physician-at-work-medicine-concept.jpg?s=2048x2048&w=is&k=20&c=G46YJUTjjVTFgoLhT2DnMPKxpUiDq6UGygP_NAckNP8=" alt="{{ doctor.name }}">
+
+  <!-- Info -->
+  <div class="doctor-info">
+    <h2>{{ doctor.name }}</h2>
+    <div class="specialty">{{ doctor.specialty.name }}</div>
+    <div class="experience">{{ doctor.yearsOfExperience }}+ Years experience</div>
+
+    <p><strong>Languages:</strong> {{ doctor.languages.join(', ') }}</p>
+    <p><strong>Location:</strong> {{ doctor.location }}</p>
+    <p><strong>Available Days:</strong> {{ doctor.availableDays.join(', ') }}</p>
+
+    <!-- Actions -->
+    <div class="doctor-actions">
+      <button class="call-btn">CALL</button>
+      <button class="book-btn"><a routerLink="/book-appointment" routerLinkActive="active">Book Appointment</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Error -->
+<div *ngIf="error" class="error">
+  {{ error }}
+</div>
+

@@ -15,7 +15,7 @@
 
       <!-- Our Hospitals Dropdown -->
       <div class="dropdown">
-        <a class="dropbtn">Our Hospitals ▾</a>
+        <a class="dropbtn">Hospitals ▾</a>
         <div class="dropdown-content">
           <a routerLink="/location/1" routerLinkActive="active">Delhi</a>
           <a routerLink="/location/2" routerLinkActive="active">Mumbai</a>
@@ -59,8 +59,13 @@
     <div class="dropdown-content">
       <a routerLink="/doctors" routerLinkActive="active-link">All Doctors</a>
       <a routerLink="/add-doctor" routerLinkActive="active-link">Add Doctor</a>
-      <a routerLink="/doctor-schedule" routerLinkActive="active-link">Doctor Schedule</a>
-      <a routerLink="/doctor-profile" routerLinkActive="active-link">Doctor Profile</a>
+      <a>Doctor Profile
+      <!-- Find Doctor by ID -->
+        <div style="margin-top: 5px;">
+          <input type="number" [(ngModel)]="findId" placeholder="Enter Doctor ID" style="width: 100%; padding: 4px; margin-bottom: 4px;">
+          <button (click)="goToDoctor(findId)" style="width: 100%; padding: 4px;">Go</button>
+        </div>
+      </a>
     </div>
     </div>
 

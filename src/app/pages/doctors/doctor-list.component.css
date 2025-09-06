@@ -61,7 +61,7 @@ h2 {
 
 /* Delete Button */
 .table button {
-  background: linear-gradient(135deg, #ff4b5c, #d90429);
+  background: linear-gradient(135deg, #40c65b, #66cf56);
   border: none;
   padding: 6px 14px;
   border-radius: 6px;
@@ -74,7 +74,7 @@ h2 {
 }
 
 .table button:hover {
-  background: linear-gradient(135deg, #d90429, #ff4b5c);
+  background: linear-gradient(135deg, #129109, #0a8d08);
   box-shadow: 0 0 14px rgba(255, 75, 92, 0.7);
   transform: translateY(-2px);
 }
@@ -104,5 +104,66 @@ h2 {
     content: attr(data-label);
     font-weight: bold;
     color: #3c00ff;
+  }
+}
+
+
+
+
+
+
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px auto;
+  padding: 12px 18px;
+  max-width: 500px;
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 18px rgb(255, 255, 255),
+              inset 0 0 0 1px rgb(255, 255, 255);
+  backdrop-filter: blur(12px) saturate(180%);
+  color: #0a3ecf;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Label */
+.filter-bar label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #050266;
+  white-space: nowrap;
+}
+
+/* Dropdown */
+.filter-bar .form-control {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  border-radius: 8px;
+  background: #0d1117;
+  color: #f0f4ff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Dropdown hover/focus */
+.filter-bar .form-control:focus,
+.filter-bar .form-control:hover {
+  border-color: #00e5ff;
+  box-shadow: 0 0 6px rgba(0, 229, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    max-width: 95%;
   }
 }

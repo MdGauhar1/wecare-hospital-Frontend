@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   findId!: number;
   updateId!: number;
+  findDoctorId!: number;
 
   constructor(private router: Router) {}
 
@@ -21,5 +22,11 @@ export class AppComponent {
 
   goToUpdate(id: number) {
     if (id) this.router.navigate(['/patients', id, 'edit']);
+  }
+
+   goToDoctor(id: number) {
+    if (id) {
+      this.router.navigate(['/doctors', id]);
+    }
   }
 }

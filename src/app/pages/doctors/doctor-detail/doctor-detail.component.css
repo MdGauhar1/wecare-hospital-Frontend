@@ -1,0 +1,147 @@
+
+
+.doctor-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+  background: #fff;
+  border: 2px solid #0f488a;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+  margin-top: 50px;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.doctor-card img {
+  width: 340px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  border: 2px solid #f1f5f9;
+}
+
+.doctor-info {
+  flex: 1;
+}
+
+.doctor-info h2 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+.specialty {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0360c4;
+  margin: 4px 0 10px;
+}
+
+.experience {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* text styling */
+.doctor-info p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ✅ Badges for languages & days */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 2px 4px 2px 0;
+  background: #f1f5f9;
+  color: #0360c4;
+}
+
+.badge.day {
+  background: #e0f7f7;
+  color: #008b8b;
+}
+
+/* actions */
+.doctor-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 14px;
+}
+
+.call-btn {
+  background: #003b4d;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.call-btn:hover {
+  background: #025066;
+}
+
+.book-btn {
+  background: #ffd84d;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #ffca28;
+}
+
+/* ✅ Responsive tweaks */
+@media (max-width: 600px) {
+  .doctor-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .doctor-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .doctor-actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .call-btn,
+  .book-btn {
+    width: 100%;
+  }
+}
+

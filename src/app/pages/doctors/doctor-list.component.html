@@ -1,4 +1,14 @@
-<h2>Doctors</h2>
+<div>
+  <h2>Doctors</h2>
+  <div class="filter-bar">
+  <label for="specialty">Filter by Specialty:</label>
+  <select [(ngModel)]="selectedSpecialtyId" (change)="filterBySpecialty()" class="form-control">
+  <option [value]="0">All Specialties</option>
+  <option *ngFor="let s of specialties" [value]="s.id">{{ s.name }}</option>
+  </select>
+  </div>
+</div>
+
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -19,7 +29,15 @@
       <td>{{ doctor.languages.join(', ') }}</td>
       <td>{{ doctor.location }}</td>
       <td>{{ doctor.availableDays.join(', ') }}</td>
-      <td><button class="btn btn-danger btn-sm" (click)="deleteDoctor(doctor.id!)">Delete</button></td>
+      <td><button class="btn btn-danger btn-sm"><a routerLink="/book-appointment" routerLinkActive="active">Book Appointment</a></button></td>
+      <!-- <td><button class="btn btn-danger btn-sm" (click)="deleteDoctor(doctor.id!)">Delete</button></td> -->
     </tr>
   </tbody>
-</table>
+</table> 
+
+
+
+
+
+
+
