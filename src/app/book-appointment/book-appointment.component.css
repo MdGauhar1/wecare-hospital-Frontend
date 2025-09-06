@@ -1,0 +1,95 @@
+/* Wrapper */
+.appointment-wrapper {
+  border: 2px solid #1e3c72;
+  display: flex;
+  max-width: 1000px;   /* wider */
+  margin: 0px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  min-height: 350px;   /* shorter height */
+}
+
+/* Left: Form */
+.form-container {
+  flex: 1;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ffffff, #f5f8ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #1e3c72;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Inputs */
+.form-container input,
+.form-container textarea {
+  width: 95%;          /* wider */
+  height: 34px;        /* smaller height */
+  padding: 6px 10px;   /* less padding */
+  margin-bottom: 14px; /* spacing */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.form-container textarea {
+  height: 60px;   /* smaller */
+  resize: vertical;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 4px rgba(42, 82, 152, 0.25);
+  outline: none;
+}
+
+/* Button */
+.form-container button {
+  width: 95%;          /* match input width */
+  height: 36px;        /* smaller button */
+  margin: 8px auto 0;  /* space & centered */
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  transform: translateY(-1px);
+}
+
+/* Right: Image */
+.form-image {
+  flex: 1;
+  background-image: url('https://media.istockphoto.com/id/1139755582/photo/medical-equipment-on-the-background-of-group-of-health-workers-in-the-icu.jpg?s=2048x2048&w=is&k=20&c=0zl_Ay1Aqx0AIsi9KTZlDUM8FouBsIUUW-6DPOMruUQ=');
+  background-size: cover;
+  background-position: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appointment-wrapper {
+    flex-direction: column;
+    max-width: 95%;
+    min-height: auto;
+  }
+  .form-image {
+    height: 160px;
+  }
+}

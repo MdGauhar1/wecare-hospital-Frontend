@@ -1,0 +1,24 @@
+<div class="appointment-wrapper">
+  <div class="form-container">
+    <h2>Book Appointment</h2>
+    <form (ngSubmit)="book()">
+
+      <!-- Patient Details -->
+      <input [(ngModel)]="appointment.patient.name" name="patientName" placeholder="Patient Name" required />
+      <input [(ngModel)]="appointment.patient.age" name="patientAge" type="number" placeholder="Age" required />
+      <input [(ngModel)]="appointment.patient.gender" name="patientGender" placeholder="Gender" required />
+      <input [(ngModel)]="appointment.patient.phone" name="patientPhone" placeholder="Phone" required />
+      <input [(ngModel)]="appointment.patient.email" name="patientEmail" placeholder="Email" required />
+
+      <!-- Appointment Details -->
+      <input [(ngModel)]="appointment.doctorName" name="doctorName" placeholder="Doctor Name" required />
+      <input [(ngModel)]="appointment.date" type="date" name="date" required />
+      <input [(ngModel)]="appointment.time" type="time" name="time" required />
+      <textarea [(ngModel)]="appointment.reason" name="reason" placeholder="Reason"></textarea>
+
+      <button type="submit">Book</button>
+    </form>
+  </div>
+    <!-- Right Side: Image -->
+  <div class="form-image"></div>
+</div>

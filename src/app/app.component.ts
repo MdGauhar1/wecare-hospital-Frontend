@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, RouterModule, FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'wecare-frontend';
+  findId!: number;
+  updateId!: number;
+
+  constructor(private router: Router) {}
+
+  goToPatient(id: number) {
+    if (id) this.router.navigate(['/patients', id]);
+  }
+
+  goToUpdate(id: number) {
+    if (id) this.router.navigate(['/patients', id, 'edit']);
+  }
 }

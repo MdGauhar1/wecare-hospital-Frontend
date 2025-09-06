@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+/* Optional: force minimum width */
+body {
+  min-width: 1024px;
+  overflow-x: auto;
+}

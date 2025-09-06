@@ -1,0 +1,558 @@
+/* --- Hospital Background Section --- */
+.hospital-overview {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0px 15px;
+}
+
+.hospital-bg {
+  width: 100%;
+  max-width: 1600px;
+  height: 600px;
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hospital-bg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Overlay for readability */
+.hospital-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35);
+  border-radius: 16px;
+}
+
+.hospital-info {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 20px;
+}
+
+.hospital-info h1 {
+  font-size: 4.2rem;
+  margin-bottom: 320px;
+}
+
+.hospital-info p {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 70px;
+  background-color: #e6f2ff;
+  gap: 30px;
+  border-radius: 20px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.cta-btn {
+  padding: 14px 30px;
+  background-color: #004080;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #003366;
+  transform: translateY(-2px);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* --- Statistics Section --- */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  background-color: #ffffff;
+}
+
+.stat-item {
+  flex: 1 1 180px;
+  text-align: center;
+  min-width: 140px;
+}
+
+.stat-item h2 {
+  font-size: 2.2rem;
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.stat-item small {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .hospital-bg {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hospital-bg {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.departments {
+  padding: 50px 20px;
+  background-color: #e1f0fb;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #2d2d2d;
+}
+
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dept-card {
+  background-color: #f2f8ff;
+  border: 1px solid #d4e1f4;
+  border-radius: 4px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.dept-card:hover {
+  background-color: #003b91;
+  color: #ffffff;
+}
+
+.dept-card:hover i {
+  color: #b6ff00; /* Matches the neon green color of the icon in screenshot */
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #4b4b4b;
+}
+
+.dept-card p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*patients review*/
+.testimonials {
+  background-color: #d8ecfce9;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  text-align: left;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #f44336;
+  color: white;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 2px;
+}
+
+.quote {
+  font-size: 0.95rem;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-weight: bold;
+  color: #2d2d2d;
+  margin-bottom: 2px;
+}
+
+.year {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.read-more {
+  font-size: 0.85rem;
+  color: #000;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.pagination-dots {
+  margin-top: 30px;
+}
+
+.pagination-dots span {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.pagination-dots span.active {
+  background-color: #f44336;
+  transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*news  and events*/
+.news-events-section {
+  background-color: #d8ecfce9;
+  padding: 60px 20px;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.news-events-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.news, .events {
+  flex: 1 1 45%;
+}
+
+.news h2, .events h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+}
+
+.news-list {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item .line {
+  width: 4px;
+  height: 100%;
+  background-color: #008a7d;
+  border-radius: 2px;
+}
+
+.news-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.events .event-card {
+  background-color: #033b9b;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  color: white;
+}
+
+.event-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.event-details {
+  padding: 15px;
+  flex: 1;
+}
+
+.event-details h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: white;
+}
+
+.event-date {
+  color: #ffc107;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* frequently asked questions*/
+.faq-section {
+  padding: 60px 20px;
+  background-color: #d8ecfce9;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 20px;
+}
+
+.faq-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #212121;
+}
+
+.faq-subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+.faq-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.faq-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #003a70;
+}
+
+.faq-toggle-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0077cc;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.5;
+}
+

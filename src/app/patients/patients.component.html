@@ -1,0 +1,31 @@
+<div class="patients-wrapper">
+  <h2>Patients List</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Name</th><th>Age</th><th>Email</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of patients">
+        <td>{{p.id}}</td>
+
+        <td *ngIf="editId !== p.id">{{p.name}}</td>
+        <td *ngIf="editId === p.id"><input [(ngModel)]="editPatient.name" /></td>
+
+        <td *ngIf="editId !== p.id">{{p.age}}</td>
+        <td *ngIf="editId === p.id"><input type="number" [(ngModel)]="editPatient.age" /></td>
+
+        <td *ngIf="editId !== p.id">{{p.email}}</td>
+        <td *ngIf="editId === p.id"><input [(ngModel)]="editPatient.email" /></td>
+
+        <td>
+          <button *ngIf="editId !== p.id" (click)="startEdit(p)">Edit</button>
+          <button *ngIf="editId === p.id" (click)="updatePatient()">Save</button>
+          <button (click)="deletePatient(p.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

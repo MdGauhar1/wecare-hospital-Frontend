@@ -1,0 +1,166 @@
+<!-- Hospital Overview as Background -->
+<section class="hospital-overview" *ngIf="hospital">
+  <div 
+    class="hospital-bg" 
+    [style.background-image]="'url(https://cdn.pixabay.com/photo/2016/05/01/21/29/universitatsklinikum-ulm-1366020_1280.jpg)'" >
+    <div class="hospital-info">
+      <h1>{{ hospital.name }}</h1>
+      <h2 style="color: rgba(224, 214, 214, 0.989);">
+        At wEcare, we are committed to providing exceptional care to our community. 
+        Whether you're visiting for a routine check-up, emergency care, or specialized treatment, 
+        our compassionate and professional team is here to support you every step of the way.
+      </h2>
+      <p>Rating: {{ hospital.rating }}</p>
+    </div>
+  </div>
+</section>
+
+<main class="main-content">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>We'll Treat You Well</h1>
+      <p>
+        At WEcare, we give utmost importance to provide care, attention, and high-quality medical
+        services to our patients. This promise is for patients, employees, and society at large.
+      </p>
+      <button class="cta-btn" (click)="goToKnowMore()">Know More</button>
+    </div>
+
+    <div class="hero-image">
+       <img src="https://cdn.pixabay.com/photo/2016/11/08/05/29/operation-1807543_1280.jpg" alt="Doctors Team" style="filter: brightness(80%);">
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats">
+    <div class="stat-item">
+      <h2>4</h2>
+      <p>States</p>
+      <small>High-quality care closer to you</small>
+    </div>
+    <div class="stat-item">
+      <h2>19</h2>
+      <p>Hospitals</p>
+      <small>Providing world-class healthcare</small>
+    </div>
+    <div class="stat-item">
+      <h2>2600+</h2>
+      <p>Doctors</p>
+      <small>Working together to give best medical care</small>
+    </div>
+    <div class="stat-item">
+      <h2>40+</h2>
+      <p>Specialty</p>
+      <small>To help you live better</small>
+    </div>
+    <div class="stat-item">
+      <h2>3 lac+</h2>
+      <p>Patients</p>
+      <small>Treated every year</small>
+    </div>
+  </section>
+
+
+
+  <section class="departments">
+  <h2 class="title">Our Departments</h2>
+
+  <div class="dept-grid">
+    <div class="dept-card" *ngFor="let dept of departments">
+      <div class="icon">
+        <i [class]="dept.icon"></i>
+      </div>
+      <p>{{ dept.name }}</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="testimonials">
+  <h4 class="subtitle"></h4>
+  <h2 class="title">Patient Stories</h2>
+
+  <div class="testimonial-grid">
+    <div class="testimonial-card" *ngFor="let t of visibleTestimonials">
+      <div class="quote-icon">
+        <i class="fas fa-quote-left"></i>
+      </div>
+      <p class="quote">{{ t.quote }}</p>
+      <p class="author">{{ t.author }}</p>
+      <p class="year">{{ t.year }}</p>
+      <a class="read-more" href="#">Read More</a>
+    </div>
+  </div>
+
+  <div class="pagination-dots">
+    <span
+      *ngFor="let i of slideIndexes"
+      [class.active]="i === currentSlide"
+      (click)="goToSlide(i)"
+    ></span>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="news-events-section">
+  <div class="news-events-container">
+    <div class="news">
+      <h2>News & Notices</h2>
+      <div class="news-list">
+        <div class="news-item" *ngFor="let news of newsList">
+          <div class="line"></div>
+          <p>{{ news }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="events">
+      <h2>Recent Events</h2>
+      <div class="event-card" *ngFor="let event of recentEvents">
+        <img [src]="event.image" alt="{{ event.title }}" />
+        <div class="event-details">
+          <h4>{{ event.title }}</h4>
+          <p class="event-date">{{ event.date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="faq-section">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <p class="faq-subtitle">
+    Find answers to common questions about our services, treatments, and care options.
+  </p>
+
+  <div class="faq-container">
+    <div class="faq-card" *ngFor="let faq of faqs; let i = index" (click)="toggleFaq(i)">
+      <div class="faq-question">
+        {{ faq.question }}
+        <span class="faq-toggle-icon">
+          {{ faq.open ? '−' : '+' }}
+        </span>
+      </div>
+      <div class="faq-answer" *ngIf="faq.open">
+        {{ faq.answer }}
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
