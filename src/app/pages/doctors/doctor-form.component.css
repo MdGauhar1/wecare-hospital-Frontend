@@ -1,0 +1,70 @@
+/* Wrapper Card */
+.card-form {
+  border: 2px solid #1e3c72;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px 20px;   /* reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #f5f8ff);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Title */
+.card-form h2 {
+  text-align: center;
+  margin-bottom: 15px;   /* reduced */
+  color: #1e3c72;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 10px;   /* reduced spacing */
+}
+
+.form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;    /* tighter label-input gap */
+  color: #333;
+}
+
+/* Inputs & Select */
+.form-control {
+  width: 100%;
+  height: 32px;          /* smaller height */
+  padding: 4px 8px;      /* less padding */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+.form-control:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 3px rgba(42, 82, 152, 0.25);
+  outline: none;
+}
+
+/* Button */
+.card-form button {
+  width: 100%;
+  height: 34px;          /* smaller button */
+  margin-top: 6px;       /* less margin */
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-form button:hover {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  transform: translateY(-1px);
+}

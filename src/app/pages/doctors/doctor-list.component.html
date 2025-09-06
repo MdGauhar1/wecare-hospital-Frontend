@@ -1,0 +1,25 @@
+<h2>Doctors</h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Specialty</th>
+      <th>Experience</th>
+      <th>Languages</th>
+      <th>Location</th>
+      <th>Available Days</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let doctor of doctors">
+      <td>{{ doctor.name }}</td>
+      <td>{{ doctor.specialty.name }}</td>
+      <td>{{ doctor.yearsOfExperience }} yrs</td>
+      <td>{{ doctor.languages.join(', ') }}</td>
+      <td>{{ doctor.location }}</td>
+      <td>{{ doctor.availableDays.join(', ') }}</td>
+      <td><button class="btn btn-danger btn-sm" (click)="deleteDoctor(doctor.id!)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

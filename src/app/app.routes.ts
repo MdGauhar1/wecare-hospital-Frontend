@@ -7,6 +7,8 @@ import { PatientsComponent } from './patients/patients.component';
 import { PatientDetailComponent } from './patients/patient-detail.component';
 import { PatientUpdateComponent } from './patients/patient-update.component';
 import { KnowMoreComponent } from './pages/know-more/know-more.component';
+import { DoctorListComponent } from './pages/doctors/doctor-list.component';
+import { DoctorFormComponent } from './pages/doctors/doctor-form.component';
 
 
 export const routes: Routes = [
@@ -18,6 +20,8 @@ export const routes: Routes = [
   { path: 'patients/:id', component: PatientDetailComponent },
   { path: 'patients/:id/edit', component: PatientUpdateComponent },
   { path: 'know-more', component: KnowMoreComponent },
+  { path: 'doctors', component: DoctorListComponent },
+  { path: 'add-doctor', component: DoctorFormComponent },
   { path: '**', redirectTo: '' },
 ];
 
