@@ -1,5 +1,5 @@
 <div>
-  <h2>Doctors</h2>
+  <h1  style="text-align: center;">Doctors</h1>
   <div class="filter-bar">
   <label for="specialty">Filter by Specialty:</label>
   <select [(ngModel)]="selectedSpecialtyId" (change)="filterBySpecialty()" class="form-control">
@@ -9,31 +9,45 @@
   </div>
 </div>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Specialty</th>
-      <th>Experience</th>
-      <th>Languages</th>
-      <th>Location</th>
-      <th>Available Days</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let doctor of doctors">
-      <td>{{ doctor.name }}</td>
-      <td>{{ doctor.specialty.name }}</td>
-      <td>{{ doctor.yearsOfExperience }} yrs</td>
-      <td>{{ doctor.languages.join(', ') }}</td>
-      <td>{{ doctor.location }}</td>
-      <td>{{ doctor.availableDays.join(', ') }}</td>
-      <td><button class="btn btn-danger btn-sm"><a routerLink="/book-appointment" routerLinkActive="active">Book Appointment</a></button></td>
-      <!-- <td><button class="btn btn-danger btn-sm" (click)="deleteDoctor(doctor.id!)">Delete</button></td> -->
-    </tr>
-  </tbody>
-</table> 
+
+
+<div class="doctor-list">
+  <div class="doctor-card" *ngFor="let doctor of doctors">
+    
+    <!-- Left: Doctor Image -->
+    <div class="doctor-img">
+      <img src="https://media.istockphoto.com/id/517051420/photo/portrait-an-unknown-male-doctor-holding-a-stethoscope-behind.jpg?s=2048x2048&w=is&k=20&c=5Mea3tnl2P71EGCdmNyPkuNIMz0nmwfmn_8K-Oam4Zs=" alt="{{doctor.name}}">
+    </div>
+
+    <!-- Center: Doctor Info -->
+    <div class="doctor-info">
+      <h3>{{ doctor.name }}</h3>
+      <p class="specialty">{{ doctor.specialty.name }}</p>
+      <p class="experience">{{ doctor.yearsOfExperience }}+ Years experience</p>
+      <p>{{ doctor.languages.join(', ') }}</p>
+      <p>{{ doctor.availableDays.join(', ') }}</p>
+      <p>{{ doctor.location }}</p>
+    </div>
+
+    <!-- Right: Book Button -->
+    <div class="doctor-action">
+      <button class="book-btn">
+        <a routerLink="/book-appointment">Book Appointment</a>
+      </button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 
