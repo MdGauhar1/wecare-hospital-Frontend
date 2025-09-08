@@ -1,8 +1,8 @@
 <div class="add-specialty-card">
   <h2><i class="fas fa-plus-circle"></i> Add New Specialty</h2>
-
-  <div class="input-wrapper">
-    <i style="color: brown;" class="fas fa-stethoscope"></i>
+  
+  <div class="input-group">
+    <i class="fas fa-stethoscope"></i>
     <input
       [(ngModel)]="newName"
       type="text"
@@ -10,7 +10,7 @@
     />
   </div>
 
-  <button (click)="addSpecialty()" class="glow-btn">
-    <i class="fas fa-save"></i> Save Specialty   gg
+  <button (click)="addSpecialty()">
+    <i class="fas fa-save"></i> Save
   </button>
 </div>

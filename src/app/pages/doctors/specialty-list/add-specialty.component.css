@@ -1,0 +1,87 @@
+/* Card Container */
+.add-specialty-card {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 2px solid rgb(4, 4, 99);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.add-specialty-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Heading */
+.add-specialty-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0b046b;
+}
+
+.add-specialty-card h2 i {
+  color: #0360c4;
+  margin-right: 8px;
+}
+
+/* Input Group with Icon */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(240, 240, 255, 0.8);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(180, 180, 200, 0.3);
+  transition: border 0.3s ease;
+}
+
+.input-group i {
+  color: #0360c4;
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group:focus-within {
+  border-color: #0360c4;
+  box-shadow: 0 0 10px rgba(3, 96, 196, 0.2);
+}
+
+/* Button */
+.add-specialty-card button {
+  width: 100%;
+  background: linear-gradient(135deg, #0360c4, #024b96);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-specialty-card button:hover {
+  background: linear-gradient(135deg, #024b96, #002f6c);
+  transform: scale(1.05);
+}

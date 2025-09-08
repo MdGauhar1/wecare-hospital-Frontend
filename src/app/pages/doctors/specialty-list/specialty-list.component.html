@@ -9,7 +9,8 @@
       <h3>{{ s.name }}</h3>
       <p>Specialty ID: {{ s.id }}</p>
       <button (click)="viewBySpecialty(s.id)">
-        <i class="fas fa-user-md"></i> View Doctors
+        <i class="fas fa-user-md"></i>
+        <a routerLink="/doctors" routerLinkActive="active-link" style="color: aliceblue;">View Doctors</a>
       </button>
     </div>
   </div>
