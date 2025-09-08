@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-beasties-container>
+<head>
+  <meta charset="utf-8">
+  <title>WecareFrontend</title>
+  <base href="https://MdGauhar1.github.io/wecare-hospital-Frontend/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Translate Script -->
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,fr,de,es,zh-CN', // customize this list
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      },
+      'google_translate_element'
+    );
+  }
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<style>body{min-width:1024px;overflow-x:auto}</style><link rel="stylesheet" href="styles-QVQPQQAT.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-QVQPQQAT.css"></noscript></head>
+<body>
+  <app-root></app-root>
+  <!-- HTML: Popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>Notice</h2>
+    <p>This site is just a personal project. All the data in it is fictional and imaginary and has nothing to do with the real world.</p>
+    <button id="closePopup">OK</button>
+  </div>
+</div>
+
+<!-- CSS: Style the popup -->
+<style>
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* hide initially */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+  }
+
+  .popup.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+  }
+
+  .popup-content h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .popup-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+  }
+
+  #closePopup {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #closePopup:hover {
+    background: #0056b3;
+  }
+</style>
+
+<script>
+  window.onload = function() {
+    // Check if the current page is home page
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+      const popup = document.getElementById('popup');
+      const closeBtn = document.getElementById('closePopup');
+
+      popup.classList.add('show');
+
+      closeBtn.onclick = function() {
+        popup.classList.remove('show');
+      };
+    }
+  };
+</script>
+
+
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-T6YUA76L.js" type="module"></script></body>
+</html>
