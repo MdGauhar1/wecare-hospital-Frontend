@@ -1,7 +1,8 @@
 <header>
   <!-- Navbar -->
   <nav class="navbar">
-    <a routerLink="/" class="logo">wEcare</a>
+    <a routerLink="/" class="logo">
+      <span class="highlight">wE</span>care</a>
     <div class="nav-links">
       <div class="translate-container">
       <button class="translate-button">
@@ -103,6 +104,72 @@
   <router-outlet></router-outlet>
 </main>
 
-<footer class="footer">
-  © 2025 WEcare Hospitals | All Rights Reserved
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Brand Info on Top -->
+    <div class="footer-brand">
+      <h2><span class="highlight">wE</span>care Hospitals</h2>
+      <p>
+        WEcare Hospitals is committed to compassionate care,
+        modern facilities, and expert doctors. Serving patients
+        with excellence every day.
+      </p>
+    </div>
+
+    <!-- Links Below -->
+    <div class="footer-links">
+      <div>
+        <h4>Patients & Visitors</h4>
+        <a href="/doctors">Find a Doctor</a>
+        <a href="/book-appointment">Appointment</a>
+        <a href="/patients/:id">Patients</a>
+      </div>
+
+      <div>
+        <h4>About Us</h4>
+        <a href="/know-more">Know Us</a>
+        <a href="/locations">Our Locations</a>
+        
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+         <a href="/specialties/list">Services</a>
+        <a href="#">Community</a>
+        <a href="#">Help Center</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 wEcare Hospitals. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </footer>
+
+
