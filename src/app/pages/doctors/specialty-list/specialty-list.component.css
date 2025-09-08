@@ -1,0 +1,90 @@
+/* Wrapper */
+.specialty-wrapper {
+  padding: 40px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  min-height: 100vh;
+}
+
+/* Heading */
+.specialty-wrapper h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #0b046b;
+  font-weight: 700;
+}
+
+.specialty-wrapper h2 i {
+  color: #0360c4;
+  margin-right: 10px;
+}
+
+/* Grid layout */
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Card style */
+.specialty-card {
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 18px;
+  border: 2px solid rgb(12, 12, 102);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.specialty-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon inside card */
+.card-icon {
+  font-size: 2.2rem;
+  color: #0360c4;
+  margin-bottom: 15px;
+}
+
+/* Card title */
+.specialty-card h3 {
+  font-size: 1.3rem;
+  color: #0d1117;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Card text */
+.specialty-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.specialty-card button {
+  background: linear-gradient(135deg, #0360c4, #024b96);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.specialty-card button:hover {
+  background: linear-gradient(135deg, #024b96, #002f6c);
+  transform: scale(1.05);
+}

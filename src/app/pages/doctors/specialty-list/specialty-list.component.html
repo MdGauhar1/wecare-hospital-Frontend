@@ -1,0 +1,16 @@
+<div class="specialty-wrapper">
+  <h2><i class="fas fa-stethoscope"></i> Our Specialties</h2>
+
+  <div class="specialty-grid">
+    <div class="specialty-card" *ngFor="let s of specialties">
+      <div class="card-icon">
+        <i class="fas fa-notes-medical"></i>
+      </div>
+      <h3>{{ s.name }}</h3>
+      <p>Specialty ID: {{ s.id }}</p>
+      <button (click)="viewBySpecialty(s.id)">
+        <i class="fas fa-user-md"></i> View Doctors
+      </button>
+    </div>
+  </div>
+</div>

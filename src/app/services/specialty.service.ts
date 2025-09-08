@@ -12,4 +12,8 @@ export class SpecialtyService {
   getAll(): Observable<Specialty[]> {
     return this.http.get<Specialty[]>(this.apiUrl);
   }
+
+   create(spec: Specialty): Observable<Specialty> {
+    return this.http.post<Specialty>(this.apiUrl, spec);
+  }
 }
