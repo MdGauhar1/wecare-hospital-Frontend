@@ -28,5 +28,87 @@
 </head>
 <body>
   <app-root></app-root>
+  <!-- HTML: Popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2>Notice</h2>
+    <p>This site is just a personal project. All the data in it is fictional and imaginary and has nothing to do with the real world.</p>
+    <button id="closePopup">OK</button>
+  </div>
+</div>
+
+<!-- CSS: Style the popup -->
+<style>
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* hide initially */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+  }
+
+  .popup.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    font-family: Arial, sans-serif;
+  }
+
+  .popup-content h2 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .popup-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+  }
+
+  #closePopup {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #closePopup:hover {
+    background: #0056b3;
+  }
+</style>
+
+<!-- JS: Show popup on page load -->
+<script>
+  window.onload = function() {
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closePopup');
+
+    popup.classList.add('show');
+
+    closeBtn.onclick = function() {
+      popup.classList.remove('show');
+    };
+  };
+</script>
+
 </body>
 </html>
