@@ -96,19 +96,22 @@
   }
 </style>
 
-<!-- JS: Show popup on page load -->
 <script>
   window.onload = function() {
-    const popup = document.getElementById('popup');
-    const closeBtn = document.getElementById('closePopup');
+    // Check if the current page is home page
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+      const popup = document.getElementById('popup');
+      const closeBtn = document.getElementById('closePopup');
 
-    popup.classList.add('show');
+      popup.classList.add('show');
 
-    closeBtn.onclick = function() {
-      popup.classList.remove('show');
-    };
+      closeBtn.onclick = function() {
+        popup.classList.remove('show');
+      };
+    }
   };
 </script>
+
 
 </body>
 </html>
