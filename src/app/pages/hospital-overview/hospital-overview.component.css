@@ -1,3 +1,221 @@
+
+.hero-banner {
+  width: 100%;
+  height: 90vh;
+  background: #fff;
+  display: flex;
+  align-items: flex-start; /* push content to top */
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  position: relative;
+  padding-top: 40px; /* adjust this value to control top space */
+}
+
+.hero-container {
+  display: flex;
+  align-items: flex-start; /* keep items aligned from top */
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+}
+
+
+
+
+
+/* Hero Text */
+.hero-text {
+  margin-top: 10px;
+  max-width: 600px;
+  text-align: left;
+  animation: slideFade 1.5s ease-out forwards;
+}
+
+.hero-icon {
+  font-size: 80px;
+  color: #0072ff;
+  margin-bottom: 0px;
+  animation: slideFadeH 10s ease-in-out infinite;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1 rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  animation: fadeUp 1.5s ease-out forwards 0.5s;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: left;
+}
+
+/* Buttons */
+.hero-buttons button {
+  background: #0072ff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  margin-right: 15px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  animation: popIn 0.8s ease-out forwards 1s;
+}
+
+.hero-buttons button:hover {
+  background: #00c6ff;
+  transform: scale(1.1);
+}
+
+/* Badges */
+.hero-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.hero-badges .badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #e6f0ff;
+  color: #0072ff;
+  padding: 8px 10px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.9 rem;
+  animation: popIn 1s ease-out forwards;
+}
+
+/* Floating Icons */
+.hero-animation {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+.hero-animation i {
+  font-size: 40px;
+  color: #0072ff;
+  animation: slideFadeLR 10s ease-in-out infinite;
+}
+
+.hero-animation i:nth-child(1) { animation-delay: 0s; }
+.hero-animation i:nth-child(2) { animation-delay: 1s; }
+.hero-animation i:nth-child(3) { animation-delay: 2s; }
+.hero-animation i:nth-child(4) { animation-delay: 3s; }
+.hero-animation i:nth-child(5) { animation-delay: 4s; }
+
+
+.hero-shapes .circle:nth-child(2) {
+  width: 60px; height: 60px;
+  top: 70%; left: 10%;
+  animation-delay: 10s;
+}
+
+.hero-shapes .circle:nth-child(3) {
+  width: 100px; height: 100px;
+  top: 40%; left: 80%;
+  animation-delay: 10s;
+}
+
+/* Animations */
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+
+@keyframes slideFadeLR {
+  0% { opacity: 0; transform: translateX(-50px); }
+  25% { opacity: 1; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(50px); }
+  75% { opacity: 0; transform: translateX(100px); }
+  100% { opacity: 0; transform: translateX(-50px); }
+}
+
+@keyframes floatCircle {
+  0% { transform: translateY(0px); opacity: 0.6; }
+  50% { transform: translateY(-30px); opacity: 0.9; }
+  100% { transform: translateY(0px); opacity: 0.6; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-animation {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --- Hospital Background Section --- */
 .hospital-overview {
   display: flex;
@@ -561,3 +779,127 @@
   line-height: 1.5;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Appointment Card */
+.appointment-card {
+  position: absolute;
+  top: 35%;               /* vertically centered a bit lower */
+  left: 70%;              /* slightly right of center */
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  width: 220px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 2px solid #072747;
+  z-index: 10;
+}
+
+/* Quote Text */
+.appointment-card .quote {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  position: relative;
+  padding: 0 15px;
+}
+
+/* Left Quote */
+.appointment-card .quote::before {
+  content: "\f10d"; /* fa-quote-left */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #1a73e8;
+  font-size: 18px;
+  position: absolute;
+  left: -5px;
+  top: -10px;
+}
+
+/* Right Quote */
+.appointment-card .quote::after {
+  content: "\f10e"; /* fa-quote-right */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #1a73e8;
+  font-size: 18px;
+  position: absolute;
+  right: -5px;
+  bottom: -10px;
+}
+
+/* Button */
+.appointment-card button {
+  background: linear-gradient(90deg, #1a73e8, #00c6ff);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(26, 115, 232, 0.3);
+}
+
+.appointment-card button::before {
+  content: "\f073"; /* fa-calendar-alt */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+.appointment-card button:hover {
+  background: linear-gradient(90deg, #00c6ff, #1a73e8);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(26, 115, 232, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .appointment-card {
+    position: static;
+    transform: none;
+    margin: 30px auto;
+  }
+}

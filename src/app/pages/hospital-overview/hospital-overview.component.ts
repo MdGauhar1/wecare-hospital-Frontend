@@ -241,4 +241,8 @@ toggleFaq(index: number) {
   goToKnowMore() {
     this.router.navigate(['/know-more']);
   }
+
+   goToBookAppointment() {
+    this.router.navigate(['/book-appointment']);
+  }
 }
