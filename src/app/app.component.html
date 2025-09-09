@@ -144,3 +144,33 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Popup notice -->
+<div *ngIf="showPopup" class="popup">
+  <div class="popup-content">
+    <h2>Notice</h2>
+    <p>
+      This site is just a personal project. All the data in it is fictional and imaginary and has nothing to do with the real world.
+    </p>
+    <button (click)="closePopup()">OK</button>
+  </div>
+</div>
+
+<!-- Main app content -->
+<div *ngIf="!showPopup">
+</div>

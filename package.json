@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --configuration production --base-href 'https://MdGauhar1.github.io/wecare-hospital-Frontend/' && npx angular-cli-ghpages --dir=dist/wecare-frontend/browser"
   },
   "private": true,
   "dependencies": {

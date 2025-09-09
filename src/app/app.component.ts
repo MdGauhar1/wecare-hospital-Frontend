@@ -7,6 +7,7 @@ import {
   RouterModule
 } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common'; // <-- important for *ngIf
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     RouterLink,
     RouterLinkActive,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgIf // <-- add NgIf here
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -39,14 +41,6 @@ export class AppComponent {
     this.openDropdown = null; // close dropdown when menu toggles
   }
 
-  // // Close mobile menu when a link is clicked
-  // closeMenuIfMobile(event: any) {
-  //   if (window.innerWidth <= 768 && event.target.tagName === 'A') {
-  //     this.menuOpen = false;
-  //     this.openDropdown = null;
-  //   }
-  // }
-
   // Toggle dropdowns on mobile
   toggleDropdown(dropdown: string) {
     if (window.innerWidth <= 768) {
@@ -68,29 +62,36 @@ export class AppComponent {
   }
 
   goToKnowMore() {
-    // Implement navigation to 'Know Us' page
-    this.router.navigate(['/know-us']); // adjust route if needed
+    this.router.navigate(['/know-us']);
   }
 
   goToBookAppointment() {
     this.router.navigate(['/book-appointment']);
   }
 
-
-
-
-
-
   closeMenuIfMobile(event: any) {
-  if (window.innerWidth <= 768) {
-    const tag = event.target.tagName;
-    const isDropdownToggle = event.target.classList.contains('dropbtn');
-
-    if (tag === 'A' && !isDropdownToggle) {
-      this.menuOpen = false;
-      this.openDropdown = null;
+    if (window.innerWidth <= 768) {
+      const tag = event.target.tagName;
+      const isDropdownToggle = event.target.classList.contains('dropbtn');
+      if (tag === 'A' && !isDropdownToggle) {
+        this.menuOpen = false;
+        this.openDropdown = null;
+      }
     }
   }
-}
 
+  // Popup logic
+  showPopup = false;
+
+  ngOnInit() {
+    const path = this.router.url;
+    // Show only on home page
+    if (path === '/' || path === '/index.html') {
+      this.showPopup = true;
+    }
+  }
+
+  closePopup() {
+    this.showPopup = false;
+  }
 }
