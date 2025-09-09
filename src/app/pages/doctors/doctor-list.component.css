@@ -196,6 +196,79 @@
 
 
 
+/* ✅ Mobile Responsiveness for Doctor Cards */
+@media (max-width: 768px) {
+  .doctor-list {
+    padding: 0 10px;
+  }
+
+  .doctor-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .doctor-img img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 15px 0;
+    border-radius: 12px;
+  }
+
+  .doctor-info {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .doctor-info h3 {
+    font-size: 28px;
+  }
+
+  .specialty {
+    font-size: 22px;
+  }
+
+  .experience {
+    font-size: 18px;
+  }
+
+  .doctor-info p {
+    font-size: 13px;
+  }
+
+  .doctor-action {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .book-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* ✅ Improved responsiveness for filter bar (already started) */
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    max-width: 100%;
+    padding: 10px 14px;
+  }
+
+  .filter-bar label {
+    font-size: 0.9rem;
+  }
+
+  .filter-bar .form-control {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
 
 
 
