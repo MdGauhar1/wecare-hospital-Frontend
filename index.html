@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>WecareFrontend</title>
-  <base href="https://MdGauhar1.github.io/wecare-hospital-Frontend/">
+  <base href="'https://MdGauhar1.github.io/wecare-hospital-Frontend/'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -23,7 +23,7 @@
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<style>body{min-width:1024px;overflow-x:auto}</style><link rel="stylesheet" href="styles-QVQPQQAT.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-QVQPQQAT.css"></noscript></head>
+<link rel="stylesheet" href="styles-5INURTSO.css"></head>
 <body>
   <app-root></app-root>
   <!-- HTML: Popup -->
@@ -38,6 +38,7 @@
 <!-- CSS: Style the popup -->
 <style>
   .popup {
+    border-color: 2px #0056b3;
     position: fixed;
     top: 0;
     left: 0;
@@ -95,21 +96,25 @@
 </style>
 
 <script>
-  window.onload = function() {
-    // Check if the current page is home page
-    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
-      const popup = document.getElementById('popup');
-      const closeBtn = document.getElementById('closePopup');
+  window.onload = function () {
+    // Normalize the path
+    const path = window.location.pathname;
 
-      popup.classList.add('show');
+    // Show popup only on home page (GitHub Pages base path included)
+    if (path === "/wecare-hospital-Frontend/" || path.endsWith("index.html")) {
+      const popup = document.getElementById("popup");
+      const closeBtn = document.getElementById("closePopup");
 
-      closeBtn.onclick = function() {
-        popup.classList.remove('show');
+      popup.classList.add("show");
+
+      closeBtn.onclick = function () {
+        popup.classList.remove("show");
       };
     }
   };
 </script>
 
 
-<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-T6YUA76L.js" type="module"></script></body>
+
+<script src="polyfills-B6TNHZQ6.js" type="module"></script><script src="main-D4WJ5D4G.js" type="module"></script></body>
 </html>
