@@ -1,16 +1,20 @@
 <!-- Hero Banner Section -->
 <section class="hero-banner">
   <div class="hero-container">
+
+    <!-- Hero Text -->
     <div class="hero-text">
       <div class="hero-icon">
         <i class="fas fa-hospital-symbol"></i>
       </div>
       <h1>Welcome to wEcare Hospitals</h1>
       <p>Your health is our top priority. At WEcare Hospitals, we provide compassionate care, state-of-the-art medical facilities, and a team of expert doctors dedicated to your well-being.</p>
+      
       <div class="hero-buttons">
         <button (click)="goToKnowMore()">Details</button>
-        <!--<button (click)="goToBookAppointment()">Book Appointment</button>-->
+        <!-- <button (click)="goToBookAppointment()">Book Appointment</button> -->
       </div>
+
       <!-- Badges or highlights -->
       <div class="hero-badges">
         <div class="badge"><i class="fas fa-award"></i> 10+ Years Experience</div>
@@ -19,28 +23,22 @@
       </div>
     </div>
 
-    <!-- Floating hospital icons -->
-    <div class="hero-animation">
-      <i class="fas fa-ambulance"></i>
-      <i class="fas fa-stethoscope"></i>
-      <i class="fas fa-user-md"></i>
+    <!-- Right Side Content (icons + card) -->
+    <div class="hero-side-content">
+      <div class="hero-animation">
+        <i class="fas fa-ambulance"></i>
+        <i class="fas fa-stethoscope"></i>
+        <i class="fas fa-user-md"></i>
+      </div>
+
+      <div class="appointment-card">
+        <p class="quote">"Caring for you with compassion, commitment, and excellence every day."</p>
+        <button (click)="goToBookAppointment()">Book Appointment</button>
+      </div>
     </div>
 
-    <!-- Floating shapes / decorations -->
-    <div class="hero-shapes">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
   </div>
-    <div class="appointment-card">
-       <p class="quote">"Caring for you with compassion, commitment, and excellence every day."</p>
-       <button (click)="goToBookAppointment()">Book Appointment</button>
-    </div>
 </section>
-
-
-
 
 
 
@@ -53,18 +51,21 @@
 <section class="hospital-overview" *ngIf="hospital">
   <div 
     class="hospital-bg" 
-    [style.background-image]="'url(https://cdn.pixabay.com/photo/2016/05/01/21/29/universitatsklinikum-ulm-1366020_1280.jpg)'" >
+    [style.background-image]="'url(https://cdn.pixabay.com/photo/2016/05/01/21/29/universitatsklinikum-ulm-1366020_1280.jpg)'">
+    
     <div class="hospital-info">
       <h1>{{ hospital.name }}</h1>
-      <h2 style="color: rgba(224, 214, 214, 0.989);">
+      <h2>
         At wEcare, we are committed to providing exceptional care to our community. 
         Whether you're visiting for a routine check-up, emergency care, or specialized treatment, 
         our compassionate and professional team is here to support you every step of the way.
       </h2>
       <p>Rating: {{ hospital.rating }}</p>
     </div>
+    
   </div>
 </section>
+
 
 <main class="main-content">
 

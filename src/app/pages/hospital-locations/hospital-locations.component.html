@@ -1,1 +1,20 @@
 
+<div class="container">
+  <h2 class="title">Hospital Locations</h2>
+
+  <div class="card-grid">
+    <div class="card" *ngFor="let loc of locations">
+      <div class="card-image">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="{{loc.name}}">
+      </div>
+      <div class="card-content">
+        <p class="date" style="color: green;">Available now</p>
+        <h2>wEcare</h2>
+        <p>{{ loc.city }}</p>
+      </div>
+      <div class="card-footer">
+        <a [routerLink]="['/location', loc.id]" class="btn">View Details</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -200,22 +200,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* --- Hospital Background Section --- */
 .hospital-overview {
   display: flex;
@@ -711,10 +695,6 @@
 
 
 
-
-
-
-
 /* frequently asked questions*/
 .faq-section {
   padding: 60px 20px;
@@ -778,29 +758,6 @@
   font-size: 15px;
   line-height: 1.5;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -901,5 +858,381 @@
     position: static;
     transform: none;
     margin: 30px auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ENHANCED RESPONSIVE STYLES
+========================= */
+
+@media (max-width: 1024px) {
+  .hospital-bg {
+    height: 400px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .appointment-card {
+    left: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .hero-animation {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 15px;
+  }
+
+  .appointment-card {
+    position: static;
+    transform: none;
+    margin: 30px auto;
+    width: 90%;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-buttons button {
+    margin: 0;
+  }
+
+  .hospital-bg {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: auto;
+  }
+
+  .appointment-card {
+    width: 95%;
+  }
+
+  .hospital-info h1 {
+    font-size: 3rem;
+    margin-bottom: 250px;
+  }
+
+  .hospital-bg {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-container {
+    width: 95%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-text p {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 10px;
+  }
+
+  .appointment-card {
+    padding: 20px 16px;
+  }
+
+  .hospital-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 180px;
+  }
+
+  .hospital-info p {
+    font-size: 1rem;
+  }
+
+  .hospital-bg {
+    height: 220px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-text p {
+    font-size: 0.8rem;
+  }
+
+  .hospital-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 150px;
+  }
+
+  .hero-animation i {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Fix container layout */
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Wrap right-side icons + card */
+.hero-side-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Let appointment card be flexible */
+.appointment-card {
+  position: relative; /* was absolute */
+  left: unset;
+  top: unset;
+  transform: none;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Hero animation icons responsive */
+.hero-animation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text, .hero-side-content {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .hero-animation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .appointment-card {
+    padding: 20px;
+  }
+
+  .hero-animation i {
+    font-size: 28px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.hospital-bg {
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  filter: brightness(1.2) contrast(1.1);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hospital-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.hospital-info {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.hospital-info h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hospital-info h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.hospital-info p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .hospital-bg {
+    padding: 30px 15px;
+    justify-content: flex-end;
+  }
+
+  .hospital-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .hospital-info h2 {
+    font-size: 1.05rem;
+  }
+
+  .hospital-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hospital-info h1 {
+    font-size: 2rem;
+  }
+
+  .hospital-info h2 {
+    font-size: 0.95rem;
+  }
+
+  .hospital-bg {
+    padding: 25px 15px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hospital-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .hospital-info h2 {
+    font-size: 0.85rem;
+  }
+
+  .hospital-info p {
+    font-size: 0.95rem;
+  }
+
+  .hospital-bg {
+    min-height: 350px;
+    padding: 20px 10px;
   }
 }
