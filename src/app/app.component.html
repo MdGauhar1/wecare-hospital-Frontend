@@ -2,22 +2,28 @@
   <!-- Navbar -->
   <nav class="navbar">
     <a routerLink="/" class="logo">
-      <span class="highlight">wE</span>care</a>
-    <div class="nav-links">
+      <span class="highlight">wE</span>care
+    </a>
+
+    <!-- Hamburger Button -->
+    <button class="hamburger" (click)="toggleMenu()">&#9776;</button>
+
+    <!-- Nav Links -->
+    <div class="nav-links" [class.open]="menuOpen" (click)="closeMenuIfMobile($event)">
+      <!-- Language -->
       <div class="translate-container">
-      <button class="translate-button">
-        🌐
-      </button>
-    <div id="google_translate_element" class="translate-dropdown"></div>
-    </div>
+        <button class="translate-button">🌐</button>
+        <div id="google_translate_element" class="translate-dropdown"></div>
+      </div>
+
+      <!-- Main Links -->
       <a routerLink="/" routerLinkActive="active">Home</a>
       <a routerLink="/locations" routerLinkActive="active">Locations</a>
-    
 
-      <!-- Our Hospitals Dropdown -->
+      <!-- Hospitals Dropdown -->
       <div class="dropdown">
-        <a class="dropbtn">Hospitals ▾</a>
-        <div class="dropdown-content">
+        <a class="dropbtn" (click)="toggleDropdown('hospitals')">Hospitals ▾</a>
+        <div class="dropdown-content" [class.show]="openDropdown === 'hospitals'">
           <a routerLink="/location/1" routerLinkActive="active">Delhi</a>
           <a routerLink="/location/2" routerLinkActive="active">Mumbai</a>
           <a routerLink="/location/3" routerLinkActive="active">Bangalore</a>
@@ -25,102 +31,73 @@
         </div>
       </div>
 
-      <!-- Patients Dropdown (before Book Appointment) -->
+      <!-- Patients Dropdown -->
       <div class="dropdown">
-        <a class="dropbtn">Patients ▾</a>
-        <div class="dropdown-content" style="padding: 10px; min-width: 220px;">
-          <!-- All Patients -->
+        <a class="dropbtn" (click)="toggleDropdown('patients')">Patients ▾</a>
+        <div class="dropdown-content" [class.show]="openDropdown === 'patients'" style="padding: 10px; min-width: 220px;">
           <a routerLink="/patients" routerLinkActive="active">All Patients</a>
 
-
-          <a>Find Patient By ID
-            <!-- Find Patient by ID -->
-          <div style="margin-top: 5px;">
-            <input type="number" [(ngModel)]="findId" placeholder="Enter Patient ID" style="width: 100%; padding: 4px; margin-bottom: 4px;">
-            <button (click)="goToPatient(findId)" style="width: 100%; padding: 4px;">Go</button>
+          <div class="dropdown-input-group">
+            <span>Find Patient By ID</span>
+            <input type="number" [(ngModel)]="findId" placeholder="Enter Patient ID">
+            <button (click)="goToPatient(findId)">Go</button>
           </div>
-          </a>
 
-          <a>Update Patient By ID
-            <!-- Update Patient by ID -->
-          <div style="margin-top: 5px;">
-            <input type="number" [(ngModel)]="updateId" placeholder="Enter Patient ID" style="width: 100%; padding: 4px; margin-bottom: 4px;">
-            <button (click)="goToUpdate(updateId)" style="width: 100%; padding: 4px;">Update</button>
+          <div class="dropdown-input-group">
+            <span>Update Patient By ID</span>
+            <input type="number" [(ngModel)]="updateId" placeholder="Enter Patient ID">
+            <button (click)="goToUpdate(updateId)">Update</button>
           </div>
-          </a>
-          
         </div>
       </div>
 
+      <!-- Doctors Dropdown -->
+      <div class="dropdown">
+        <a class="dropbtn" (click)="toggleDropdown('doctors')">Doctors ▾</a>
+        <div class="dropdown-content" [class.show]="openDropdown === 'doctors'">
+          <a routerLink="/doctors" routerLinkActive="active-link">All Doctors</a>
+          <a routerLink="/add-doctor" routerLinkActive="active-link">Add Doctor</a>
 
-
-
-    <div class="dropdown">
-    <a class="dropbtn">Doctors ▾</a>
-    <div class="dropdown-content">
-      <a routerLink="/doctors" routerLinkActive="active-link">All Doctors</a>
-      <a routerLink="/add-doctor" routerLinkActive="active-link">Add Doctor</a>
-      <a>Doctor Profile
-      <!-- Find Doctor by ID -->
-        <div style="margin-top: 5px;">
-          <input type="number" [(ngModel)]="findId" placeholder="Enter Doctor ID" style="width: 100%; padding: 4px; margin-bottom: 4px;">
-          <button (click)="goToDoctor(findId)" style="width: 100%; padding: 4px;">Go</button>
+          <div class="dropdown-input-group">
+            <span>Doctor Profile</span>
+            <input type="number" [(ngModel)]="findDoctorId" placeholder="Enter Doctor ID">
+            <button (click)="goToDoctor(findDoctorId)">Go</button>
+          </div>
         </div>
-      </a>
-    </div>
-    </div>
+      </div>
 
+      <!-- Specialties Dropdown -->
+      <div class="dropdown">
+        <a class="dropbtn" (click)="toggleDropdown('specialties')">Specialties ▾</a>
+        <div class="dropdown-content" [class.show]="openDropdown === 'specialties'">
+          <a routerLink="/specialties/list" routerLinkActive="active-link">Specialty List</a>
+          <a routerLink="/specialties/add" routerLinkActive="active-link">Add Specialty</a>
+        </div>
+      </div>
 
-  
-
-    <!-- Specialties Dropdown -->
-    <div class="dropdown">
-       <a class="dropbtn">Specialties ▾</a>
-       <div class="dropdown-content">
-           <a routerLink="/specialties/list" routerLinkActive="active-link">Specialty List</a>
-           <a routerLink="/specialties/add" routerLinkActive="active-link">Add Specialty</a>
-       </div>
-    </div>
-
-
-
-      <!-- Book Appointment -->
+      <!-- Appointment -->
       <a routerLink="/book-appointment" routerLinkActive="active">Appointment</a>
     </div>
   </nav>
-  <!-- Just below Navbar -->
-<div class="marquee">
-  <p>
-  🚑 <strong>Emergency Helpline:</strong> 102 &nbsp; | &nbsp; 
-  📞 <strong>General Enquiry:</strong> 112 &nbsp; | &nbsp; 
-  🏥 <strong>wEcare Hospital Management System</strong> – Your trusted partner in healthcare, available <strong>24/7</strong>  &nbsp; | &nbsp; 
-  💊 Pharmacy Support: Open 24 Hours &nbsp; | &nbsp; 
-  👨‍⚕️ Book Appointments Online Anytime
- </p>
-</div>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <p>
+      🚑 <strong>Emergency Helpline:</strong> 102 &nbsp; | &nbsp;
+      📞 <strong>General Enquiry:</strong> 112 &nbsp; | &nbsp;
+      🏥 <strong>wEcare Hospital Management System</strong> – Your trusted partner in healthcare, available <strong>24/7</strong> &nbsp; | &nbsp;
+      💊 Pharmacy Support: Open 24 Hours &nbsp; | &nbsp;
+      👨‍⚕️ Book Appointments Online Anytime
+    </p>
+  </div>
 </header>
 
 <main class="main-content">
   <router-outlet></router-outlet>
 </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer class="site-footer">
   <div class="footer-container">
-    
-    <!-- Brand Info on Top -->
     <div class="footer-brand">
       <h2><span class="highlight">wE</span>care Hospitals</h2>
       <p>
@@ -130,11 +107,10 @@
       </p>
     </div>
 
-    <!-- Links Below -->
     <div class="footer-links">
       <div>
         <h4>Patients & Visitors</h4>
-        <a routerLink="/doctors" routerLinkActive="active-link">Find A Doctors</a>
+        <a routerLink="/doctors" routerLinkActive="active-link">Find A Doctor</a>
         <a routerLink="/book-appointment" routerLinkActive="active">Appointment</a>
         <a routerLink="/patients" routerLinkActive="active">Patients</a>
       </div>
@@ -148,14 +124,13 @@
 
       <div>
         <h4>Support</h4>
-         <a routerLink="/specialties/list" routerLinkActive="active-link">Services</a>
+        <a routerLink="/specialties/list" routerLinkActive="active-link">Services</a>
         <a href="#">Community</a>
         <a href="#">Help Center</a>
       </div>
     </div>
   </div>
 
-  <!-- Bottom -->
   <div class="footer-bottom">
     <p>© 2025 wEcare Hospitals. All Rights Reserved.</p>
     <div class="social-icons">
@@ -166,9 +141,6 @@
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
   </div>
-  <!-- Font Awesome -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </footer>
-
-
