@@ -1,59 +1,77 @@
-# WecareFrontend
+# 🏥 Wecare Hospital Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+A modern hospital management frontend built with **Angular**.  
+This project powers the user interface for **Wecare Hospitals**, providing patients with hospital information, services, and booking features.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Live Demo
+🔗 [Wecare Hospital Frontend](https://mdgauhar1.github.io/wecare-hospital-Frontend/)
 
-```bash
-ng serve
-```
+---
+Its Spring boot Backend
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🔗 [wecare-hospital-Backend](https://github.com/MdGauhar1/wecare-hospital-Backend-.git)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📌 Features
+- 🌐 Multi-language support with **Google Translate**
+- 🏥 Hospital information and services
+- 📍 Hospital locations
+- 📅 Appointment booking UI
+- 📱 Fully responsive design (mobile, tablet, desktop)
+- 🎨 Modern UI with FontAwesome icons
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Tech Stack
+- **Frontend:** Angular 16+, TypeScript  
+- **Styling:** CSS3, Flexbox, Responsive Design  
+- **Icons:** FontAwesome  
+- **Hosting:** GitHub Pages  
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## ⚡ Installation & Setup
 
-To build the project run:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mdgauhar1/wecare-hospital-Frontend.git
+   cd wecare-hospital-Frontend
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+⭐ Contribute
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Contributions are welcome!
+Feel free to fork this repo, create a branch, and submit a PR.
 
-```bash
-ng test
-```
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+   🧑‍💻 Author
 
-## Additional Resources
+👤 Md Gauhar
+📌 B.Tech CSE | Java & Spring Boot Developer | Angular Enthusiast
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🔗 GitHub: mdgauhar1
+
+
+
+
+
+
+
+
+
+
+
+
+⚠️ Disclaimer
+
+This is a personal project created for learning and practice purposes.
+All hospital names, doctors, patients, and other data are fictional and imaginary.
+It has nothing to do with the real world and should not be used for actual medical purposes.
+
