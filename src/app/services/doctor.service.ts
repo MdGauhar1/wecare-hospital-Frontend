@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Doctor } from '../pages/doctors/doctor.model';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class DoctorService {
@@ -70,12 +70,11 @@ export class DoctorService {
 
 
 
-
-
-   // Get all doctors (static + dynamic)
+   // ✅ Get all doctors (static + dynamic with fallback)
   getAll(): Observable<Doctor[]> {
     return this.http.get<Doctor[]>(this.apiUrl).pipe(
-      map((dynamicDoctors: Doctor[] = []) => [...this.staticDoctors, ...dynamicDoctors])
+      map(dynamicDoctors => [...this.staticDoctors, ...dynamicDoctors]),
+      catchError(() => of(this.staticDoctors)) // fallback if backend fails
     );
   }
 

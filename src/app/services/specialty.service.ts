@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Specialty } from '../pages/doctors/specialty.model';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root' })
@@ -29,12 +29,18 @@ export class SpecialtyService {
   // }
 
 
-   // Get dynamic specialties from backend
+  
+
+  // ✅ Get specialties (static + dynamic with fallback)
   getAll(): Observable<Specialty[]> {
     return this.http.get<Specialty[]>(this.apiUrl).pipe(
-      map(dynamicSpecialties => [...this.staticSpecialties, ...dynamicSpecialties])
+      map(dynamicSpecialties => [...this.staticSpecialties, ...dynamicSpecialties]),
+      catchError(() => of(this.staticSpecialties)) // fallback if backend is down
     );
   }
+
+
+
 
    create(spec: Specialty): Observable<Specialty> {
     return this.http.post<Specialty>(this.apiUrl, spec);

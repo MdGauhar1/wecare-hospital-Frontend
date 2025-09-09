@@ -134,22 +134,21 @@
     <div class="footer-links">
       <div>
         <h4>Patients & Visitors</h4>
-        <a href="/doctors">Find a Doctor</a>
-        <a href="/book-appointment">Appointment</a>
-        <a href="/patients/:id">Patients</a>
+        <a routerLink="/doctors" routerLinkActive="active-link">Find A Doctors</a>
+        <a routerLink="/book-appointment" routerLinkActive="active">Appointment</a>
+        <a routerLink="/patients" routerLinkActive="active">Patients</a>
       </div>
 
       <div>
         <h4>About Us</h4>
-        <a href="/know-more">Know Us</a>
-        <a href="/locations">Our Locations</a>
-        
+        <a (click)="goToKnowMore()">Know Us</a>
+        <a routerLink="/locations" routerLinkActive="active">Our Locations</a>
         <a href="#">Contact Us</a>
       </div>
 
       <div>
         <h4>Support</h4>
-         <a href="/specialties/list">Services</a>
+         <a routerLink="/specialties/list" routerLinkActive="active-link">Services</a>
         <a href="#">Community</a>
         <a href="#">Help Center</a>
       </div>

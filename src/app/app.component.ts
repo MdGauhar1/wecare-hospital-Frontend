@@ -10,6 +10,12 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+goToKnowMore() {
+throw new Error('Method not implemented.');
+}
+goToBookAppointment() {
+throw new Error('Method not implemented.');
+}
   findId!: number;
   updateId!: number;
   findDoctorId!: number;
