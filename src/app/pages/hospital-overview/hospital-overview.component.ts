@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { HospitalService } from '../../services/hospital.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hospital-overview',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgIf],
   templateUrl: './hospital-overview.component.html',
   styleUrls: ['./hospital-overview.component.css']
 })
@@ -242,7 +242,25 @@ toggleFaq(index: number) {
     this.router.navigate(['/know-more']);
   }
 
-   goToBookAppointment() {
+  //  goToBookAppointment() {
+  //   this.router.navigate(['/book-appointment']);
+  // }
+
+
+  goToBookAppointment() {
+  if (this.isLoggedIn()) {
+    // Redirect to booking page if logged in
     this.router.navigate(['/book-appointment']);
+  } else {
+    // Redirect to login page if not logged in
+    this.router.navigate(['/login']);
   }
+}
+
+
+  isLoggedIn(): boolean {
+  // Example: checking token in localStorage
+  return localStorage.getItem('token') !== null;
+}
+
 }

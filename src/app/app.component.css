@@ -593,3 +593,29 @@ body { top: 0px !important; }
 .popup-content button:hover {
   background: #0056b3;
 }
+
+
+
+
+
+
+
+.auth-btn {
+  padding: 5px 12px;
+  font-size: 13px;
+
+  border-radius: 3px;
+  border: 1px solid #000000;
+
+  background: #ff9800;        /* simple */
+  color: rgb(0, 0, 0);              /* simple */
+
+  text-decoration: none;
+  margin-left: 10px;
+
+  transition: 0.2s;
+}
+
+.auth-btn:hover {
+  background: #352e95;          /* light grey hover */
+}

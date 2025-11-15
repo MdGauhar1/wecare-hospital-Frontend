@@ -76,9 +76,17 @@
       </div>
 
       <!-- Appointment -->
-      <a routerLink="/book-appointment" routerLinkActive="active">Appointment</a>
+      <!--<a routerLink="/book-appointment" routerLinkActive="active">Appointment</a>-->
+      <a *ngIf="isLoggedIn()" routerLink="/book-appointment" routerLinkActive="active"> Appointment</a>
+
+
+      <a *ngIf="!isLoggedIn()" routerLink="/login" class="auth-btn login-btn">Login</a>
+      <a *ngIf="!isLoggedIn()" routerLink="/register" class="auth-btn register-btn">Register</a>
+      <a *ngIf="isLoggedIn()" (click)="logout()" class="auth-btn logout-btn">Logout</a>
     </div>
   </nav>
+
+
 
   <!-- Marquee -->
   <div class="marquee">

@@ -22,7 +22,7 @@ export class PatientsComponent implements OnInit {
   }
 
   loadPatients() {
-    this.http.get<any[]>('http://localhost:8080/api/patients')
+    this.http.get<any[]>('http://localhost:8082/api/patients')
       .subscribe(data => this.patients = data);
   }
 
@@ -32,7 +32,7 @@ export class PatientsComponent implements OnInit {
   }
 
   updatePatient() {
-    this.http.put(`http://localhost:8080/api/patients/${this.editPatient.id}`, this.editPatient)
+    this.http.put(`http://localhost:8082/api/patients/${this.editPatient.id}`, this.editPatient)
       .subscribe(() => {
         this.loadPatients();
         this.editId = null;
@@ -40,7 +40,7 @@ export class PatientsComponent implements OnInit {
   }
 
   deletePatient(id: number) {
-    this.http.delete(`http://localhost:8080/api/patients/${id}`)
+    this.http.delete(`http://localhost:8082/api/patients/${id}`)
       .subscribe(() => this.loadPatients());
   }
 }

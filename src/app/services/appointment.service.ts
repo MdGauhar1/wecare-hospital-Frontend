@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AppointmentService {
-  private baseUrl = 'http://localhost:8080/api/appointments'; // Spring Boot API
+  private baseUrl = 'http://localhost:8082/api/appointments'; // Spring Boot API
 
   constructor(private http: HttpClient) {}
 

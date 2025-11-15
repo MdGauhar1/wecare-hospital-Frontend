@@ -6,7 +6,7 @@ import { catchError, map } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class DoctorService {
-  private apiUrl = 'http://localhost:8080/api/doctors';
+  private apiUrl = 'http://localhost:8082/api/doctors';
 
 
 

@@ -94,4 +94,23 @@ export class AppComponent {
   closePopup() {
     this.showPopup = false;
   }
+
+
+
+
+
+
+
+
+
+  isLoggedIn() {
+  return localStorage.getItem('token') !== null;
+}
+
+logout() {
+  localStorage.removeItem('token');
+  alert("Logged out");
+  this.router.navigate(['/']); // optional: redirect home
+}
+
 }

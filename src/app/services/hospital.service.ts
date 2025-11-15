@@ -39,7 +39,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HospitalService {
-  private baseUrl = 'http://localhost:8080/api/hospital';
+  private baseUrl = 'http://localhost:8082/api/hospital';
 
   // ✅ Static data for fallback
   private overview = {

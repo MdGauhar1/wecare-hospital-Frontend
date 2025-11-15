@@ -12,6 +12,9 @@ import { DoctorFormComponent } from './pages/doctors/doctor-form.component';
 import { DoctorDetailComponent } from './pages/doctors/doctor-detail/doctor-detail.component';
 import { SpecialtyListComponent } from './pages/doctors/specialty-list/specialty-list.component';
 import { AddSpecialtyComponent } from './pages/doctors/specialty-list/AddSpecialtyComponent';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+
 
 
 export const routes: Routes = [
@@ -28,6 +31,8 @@ export const routes: Routes = [
   { path: 'doctors/:id', component: DoctorDetailComponent },
   { path: 'specialties/list', component: SpecialtyListComponent },
   { path: 'specialties/add', component: AddSpecialtyComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', redirectTo: '' },
 ];
 

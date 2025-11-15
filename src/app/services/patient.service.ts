@@ -17,7 +17,7 @@ export interface Patient {
 })
 export class PatientService {
 
-  private apiUrl = 'http://localhost:8080/api/patients';
+  private apiUrl = 'http://localhost:8082/api/patients';
 
 
 

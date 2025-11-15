@@ -1,0 +1,103 @@
+/* ------------------------------
+   Ultra-Compact Register Box
+------------------------------- */
+.register-box {
+  width: 600px;                 /* smaller width */
+  margin: 90px auto;            /* smaller spacing */
+  padding: 22px;                /* compact padding */
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgb(0, 0, 0);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Title */
+.register-box h2 {
+  margin-bottom: 15px;
+  font-size: 20px;              /* smaller */
+  font-weight: 700;
+  color: #0a3d91;
+}
+
+/* ----------------------------------
+        Smaller Input Boxes
+----------------------------------- */
+.register-box input {
+  width: 88%;
+  padding: 8px 10px;            /* very compact */
+  margin: 6px 0;
+  border-radius: 8px;
+  background: #f5f8ff;
+  border: 1px solid #c7d3e7;
+  font-size: 13px;              /* smaller */
+  transition: 0.25s ease;
+}
+
+.register-box input:focus {
+  border-color: #0a3d91;
+  background: white;
+  box-shadow: 0 0 6px rgba(10, 61, 145, 0.25);
+  transform: scale(1.01);
+}
+
+.register-box input::placeholder {
+  font-size: 12px;
+  color: #8c9ab5;
+}
+
+/* ----------------------------------
+       Compact Register Button
+----------------------------------- */
+.register-box button {
+  width: 88%;
+  padding: 9px 0;               /* compact */
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #0a3d91, #072d6c);
+  color: white;
+
+  font-size: 14px;              /* smaller */
+  font-weight: 600;
+
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(10, 61, 145, 0.25);
+  transition: 0.3s ease;
+}
+
+.register-box button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #072d6c, #0a3d91);
+}
+
+/* Success Message */
+.register-box p {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0a3d91;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------
+        Mobile View
+------------------------------- */
+@media (max-width: 500px) {
+  .register-box {
+    width: 88%;
+    padding: 20px;
+  }
+}
