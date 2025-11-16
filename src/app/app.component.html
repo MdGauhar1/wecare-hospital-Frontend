@@ -79,6 +79,11 @@
       <!--<a routerLink="/book-appointment" routerLinkActive="active">Appointment</a>-->
       <a *ngIf="isLoggedIn()" routerLink="/book-appointment" routerLinkActive="active"> Appointment</a>
 
+      <!-- Show only when logged in -->
+      <span *ngIf="isLoggedIn()" class="user-display">
+             Hello <strong>{{ username }}</strong>
+      </span>
+
 
       <a *ngIf="!isLoggedIn()" routerLink="/login" class="auth-btn login-btn">Login</a>
       <a *ngIf="!isLoggedIn()" routerLink="/register" class="auth-btn register-btn">Register</a>

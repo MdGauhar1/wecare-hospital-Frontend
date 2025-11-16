@@ -619,3 +619,18 @@ body { top: 0px !important; }
 .auth-btn:hover {
   background: #352e95;          /* light grey hover */
 }
+
+
+
+
+
+.user-display {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #000;
+  background: #36b64d;
+  color: #000;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+

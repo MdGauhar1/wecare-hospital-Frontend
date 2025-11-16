@@ -33,6 +33,7 @@ export class LoginComponent {
     }).subscribe({
       next: (res: any) => {
         localStorage.setItem('token', res.token); // store token
+         localStorage.setItem('username', this.username); 
         alert("Login Successful!");
         this.router.navigate([this.returnUrl]); // redirect to intended page or home
       },
